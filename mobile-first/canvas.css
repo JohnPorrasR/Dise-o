@@ -1,0 +1,98 @@
+.Canvas {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.Canvas-Main {
+  padding: 10px 0;
+}
+.Canvas-sidebar {
+  position: absolute;
+  width: 50vw;
+  right: -50vw;
+  top: 0;
+  transition: 0.6s;
+}
+.Canvas-sidebar.is-active {
+  right: 0;
+}
+.Header {
+  margin: auto;
+  background-color: #141f23;
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  height: 50px;
+  line-heght: 10px;
+}
+.Header-logo {
+  text-transform: uppercase;
+  font-weight: normal;
+  text-shadow: 0 0 10px #000;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.Header-button {
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: none;
+}
+.Header-button.is-active {
+  display: block;
+}
+.MainMenu {
+  padding: 0;
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  left: -200px;
+  top: 0;
+  transition: 0.6s;
+  background-color: #cd853f;
+}
+.MainMenu.is-active {
+  left: 0;
+}
+.MainMenu-item {
+  list-style: none;
+  text-align: center;
+  line-heght: 50px;
+}
+.MainMenu-link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: 0.6s;
+  margin: 2px 0;
+}
+.MainMenu-link:hover {
+  background-color: #0e0f0f;
+}
+.MainMenu #hideMenu {
+  margin: -18px -28px 0 0;
+}
+@media screen and (min-width: 767px) {
+  .Header-button {
+    display: none;
+/*&.is-active
+				display none*/
+  }
+  .MainMenu {
+    left: initial;
+    right: 0;
+    width: auto;
+    height: 30px;
+  }
+  .MainMenu-item {
+    display: inline-block;
+  }
+  .MainMenu-link {
+    padding: 10px 20px;
+  }
+}

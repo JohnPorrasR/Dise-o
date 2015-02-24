@@ -1,0 +1,85 @@
+// @import "nib"
+
+.Canvas
+	margin 0
+	overflow hidden
+	position relative
+	&-Main
+		padding 10px 0
+	&-sidebar
+		position absolute
+		width 50vw
+		right -50vw
+		top 0
+		transition .6s
+		&.is-active
+			right 0
+
+.Header
+	margin auto
+	background-color #141F23
+	padding 10px
+	color white
+	position relative
+	height 50px
+	line-heght 10px
+	&-logo
+		text-transform uppercase
+		font-weight normal
+		text-shadow  0 0 10px #000000
+		text-decoration underline
+		font-size 18px
+	&-button
+		color white
+		border-radius 10px
+		border none
+		padding 10px
+		position absolute
+		right 20px
+		top 10px
+		display none
+		&.is-active
+			display block
+.MainMenu
+	padding 0
+	width 200px
+	height 100vh
+	position absolute
+	left -200px
+	top 0
+	transition .6s
+	background-color peru
+	&.is-active
+		left 0
+	&-item
+		list-style none
+		text-align center
+		line-heght 50px
+	&-link
+		color #fff
+		text-decoration none
+		text-transform uppercase
+		padding 5px 10px
+		transition .6s
+		margin 2px 0
+		&:hover
+			background-color #0E0F0F
+	#hideMenu
+		margin -18px -28px 0 0
+
+@media screen and (min-width : 767px)
+	.Header
+		&-button
+			display none
+			/*&.is-active
+				display none*/
+	.MainMenu
+		left initial
+		right 0
+		width auto
+		height 30px
+		&-item
+			display inline-block
+		&-link
+			padding 10px 20px
+			
